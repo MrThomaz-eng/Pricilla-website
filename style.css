@@ -303,3 +303,44 @@ body {
 .social-icons i {
     font-size: 24px;
 }
+
+.main-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff; /* ou a cor do seu fundo */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-photo {
+    width: 110px;      /* Tamanho da foto */
+    height: 110px;     /* Deve ser igual à largura */
+    border-radius: 50%; /* Faz ficar redondo */
+    object-fit: cover; /* Não deixa a foto esticar */
+    border: 3px solid #e1e1e1; /* Borda estilo Instagram (opcional) */
+    padding: 3px;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-name {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.profile-status {
+    font-size: 0.85rem;
+    color: #888;
+    font-family: 'Poppins', sans-serif;
+}

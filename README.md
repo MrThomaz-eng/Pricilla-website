@@ -4,7 +4,7 @@ Um teste para uma cliente que busca algo simples e que converte em agendamentos 
 
 ## 🌐 Visualize o projeto:
 
-**[Ver Projeto Online](https://larissakich.github.io/Pricilla-website/)**
+**[Ver Projeto Online](https://mrthomaz-eng.github.io/Pricilla-website/)**
 
 
 ## 🛠️ Tecnologias Utilizadas

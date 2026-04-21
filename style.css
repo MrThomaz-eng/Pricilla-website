@@ -1,17 +1,15 @@
-/* --- RESET --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* REMOVE SUBLINHADO E COR AZUL PADRÃO DE LINKS */
 a {
     text-decoration: none !important;
     color: inherit;
 }
 
-/* --- VARIÁVEIS --- */
 :root {
     --nude-bg: #F5F1E8;
     --dark: #0F0F0F;
@@ -20,16 +18,15 @@ a {
     --glass: rgba(255, 255, 255, 0.4);
 }
 
-/* --- BODY --- */
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(180deg, #f8f5ef, #efe8dc);
     color: var(--dark);
     padding-bottom: 100px;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 }
 
-/* --- LOGO --- */
 .logo-container {
     display: flex;
     justify-content: center;
@@ -41,13 +38,11 @@ body {
     opacity: 0.95;
 }
 
-/* --- HERO --- */
 .hero {
     text-align: center;
     padding: 0 20px;
 }
 
-/* --- TÍTULO --- */
 .brand-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
@@ -67,7 +62,6 @@ body {
     opacity: 0.7;
 }
 
-/* --- SUBTÍTULO --- */
 .brand-subtitle {
     font-size: 0.85rem;
     letter-spacing: 1.5px;
@@ -78,7 +72,6 @@ body {
     text-align: center;
 }
 
-/* --- BOTÕES --- */
 .container-botoes {
     display: flex;
     flex-direction: column;
@@ -86,7 +79,6 @@ body {
     padding: 0 20px;
 }
 
-/* BASE */
 .btn-pill {
     display: flex;
     justify-content: space-between;
@@ -96,22 +88,19 @@ body {
     text-decoration: none;
     font-size: 13px;
     color: var(--dark);
-
     backdrop-filter: blur(10px);
     background: var(--glass);
     border: 1px solid rgba(0,0,0,0.05);
-
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* HOVER */
 .btn-pill:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     background: rgba(255,255,255,0.5);
 }
 
-/* BOTÃO PRINCIPAL */
 .btn-pill.destaque {
     background: var(--dark);
     color: #fff;
@@ -123,239 +112,30 @@ body {
     color: var(--gold);
 }
 
-.btn-pill.destaque:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.3);
-}
-
-/* ÍCONES */
 .btn-pill i {
     font-size: 18px;
     opacity: 0.7;
 }
 
-/* --- DIFERENCIAIS (CHECKLIST) --- */
-.diferenciais {
-    margin: 40px 0 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    text-align: center;
-    font-size: 0.85rem;
-    color: var(--text-soft);
-    line-height: 1.6;
-}
-
-.diferenciais p {
-    position: relative;
-}
-
-/* CHECK ELEGANTE */
-.diferenciais p::before {
-    content: "✓";
-    color: var(--gold);
-    margin-right: 6px;
-}
-
-/* --- RESULTADOS --- */
-.results {
-    margin-top: 50px;
-    text-align: center;
-}
-
-.results h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    margin-bottom: 6px;
-}
-
-.results p {
-    color: var(--text-soft);
-    font-size: 0.85rem;
-}
-
-/* --- RODAPÉ --- */
-.minimal-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px 20px;
-}
-
-.quote {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    font-style: italic;
-    line-height: 1.7;
-    color: var(--text-soft);
-    text-align: center;
-    max-width: 320px;
-    
-}
-
-/* LINHAS DECORATIVAS */
-.quote::before,
-.quote::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
-    margin: 15px auto;
-    opacity: 0.7;
-}
-
-/* --- NAV MOBILE --- */
-.mobile-bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 75px;
-    background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(12px);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    z-index: 999;
-}
-
-.nav-item {
-    text-decoration: none;
-    color: #999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-}
-
-.nav-item i {
-    font-size: 22px;
-    color: var(--dark);
-}
-
-.nav-item span {
-    font-size: 8px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-/* BOTÃO CENTRAL */
-.nav-item.central {
-    position: relative;
-    top: -25px;
-}
-
-.inner-circle {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    background: linear-gradient(145deg, #1a1a1a, #000);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 5px solid var(--nude-bg);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-}
-
-.inner-circle i {
-    color: #fff !important;
-    font-size: 28px;
-}
-
-/* --- RESPONSIVO --- */
-@media (min-width: 769px) {
-    .mobile-bottom-nav {
-        display: none;
-    }
-}
-
-.social-icons {
-    display: flex;          
-    justify-content: center; 
-    align-items: center;     
-    width: 100%;            
-    margin: 30px 0;         
-}
-
-.social-icons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.5);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(0,0,0,0.05);
-    color: var(--dark);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-
-.social-icons a:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    color: var(--gold);
-}
-
-.social-icons i {
-    font-size: 24px;
-}
-
-.main-wrapper {
-    width: 100%;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #fff; /* ou a cor do seu fundo */
-}
-
-.banner-container {
-    width: 90%;          /* No celular, ocupa 90% da largura da tela */
-    max-width: 320px;    /* No máximo 320px (tamanho ideal para destaque sem exagerar) */
-    margin: 15px auto;   /* Centraliza horizontalmente e dá espaço vertical */
-    display: flex;       /* Ajuda na centralização */
-    justify-content: center;
-}
-
-.header-photo {
-    width: 100%;         /* A foto preenche o container de forma fluida */
-    height: auto;        /* Mantém a proporção real da imagem */
-    border-radius: 20px; /* Bordas arredondadas modernas */
-    object-fit: contain; /* Garante que a foto não seja cortada */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Sombra suave para dar profundidade */
-}
-
-/* Ajuste extra para telas bem pequenas (iPhone SE, etc) */
-@media (max-width: 360px) {
-    .banner-container {
-        max-width: 250px; /* Diminui um pouco mais em celulares muito pequenos */
-    }
-}
-.section-title {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    font-size: 1.6rem;
-    margin-bottom: 30px;
-    color: #333;
-}
-
 .lista-procedimentos {
     width: 100%;
-    padding: 10px 5%; /* Dá uma margem elegante nas laterais no mobile */
-    background-color: transparent; /* Mantém o fundo bege do site */
+    padding: 10px 0;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .procedimento-item {
-    background-color: #ffffff; /* Fundo branco para o card */
-    border-radius: 15px;      /* Bordas arredondadas */
-    padding: 20px;            /* Espaço interno */
-    margin-bottom: 20px;      /* Espaço entre um card e outro */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra bem suave */
-    text-align: left;         /* Garante o alinhamento à esquerda */
-    border: 1px solid #f0f0f0; /* Borda fininha para acabamento */
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    border: 1px solid #f0f0f0;
 }
 
 .procedimento-item h4 {
@@ -370,10 +150,137 @@ body {
     font-size: 0.9rem;
     color: #666;
     line-height: 1.5;
-    margin: 0;
 }
 
 .procedimento-item i {
-    color: #d4a373; /* Cor dos ícones (Dourado/Bege) */
+    color: #d4a373;
     font-size: 1.3rem;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+.diferenciais {
+    margin: 40px 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-soft);
+}
+
+.diferenciais p::before {
+    content: "✓";
+    color: var(--gold);
+    margin-right: 6px;
+}
+
+.results {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.results h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+}
+
+.results p {
+    color: var(--text-soft);
+    font-size: 0.85rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.social-icons a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--glass);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.social-icons i {
+    font-size: 24px;
+}
+
+.minimal-footer {
+    padding: 50px 20px;
+}
+
+.quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--text-soft);
+    text-align: center;
+}
+
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+}
+
+.nav-item.central {
+    position: relative;
+    top: -25px;
+}
+
+.inner-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid var(--f8f5ef);
+}
+
+.inner-circle i {
+    color: #fff;
+    font-size: 28px;
+}
+
+.main-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-container {
+    width: 90%;
+    max-width: 320px;
+    margin: 15px auto;
+}
+
+.header-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+@media (min-width: 769px) {
+    .mobile-bottom-nav { display: none; }
 }

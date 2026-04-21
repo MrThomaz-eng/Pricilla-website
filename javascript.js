@@ -1,4 +1,3 @@
-// --- HEADER STICKY COM PERFORMANCE ---
 const header = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
@@ -11,16 +10,13 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
-// --- ANIMAÇÃO AO SCROLL (REUTILIZÁVEL) ---
 const elements = document.querySelectorAll('[data-animate]');
 
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-
             entry.target.classList.add('show');
-            observer.unobserve(entry.target); // anima só uma vez
+            observer.unobserve(entry.target);
         }
     });
 }, {
@@ -31,8 +27,6 @@ elements.forEach(el => {
     observer.observe(el);
 });
 
-
-// --- ANIMAÇÃO SUAVE AO CLICAR EM LINKS INTERNOS ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const target = document.querySelector(this.getAttribute('href'));
@@ -46,3 +40,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+function toggleProcedimentos() {
+    const area = document.getElementById("procedimentos");
+    const texto = document.getElementById("txt-procedimentos");
+    const icone = document.getElementById("icone-seta");
+
+    if (area.style.display === "none") {
+        area.style.display = "block";
+        texto.innerText = "Fechar Procedimentos";
+        icone.classList.replace('ri-arrow-down-s-line', 'ri-arrow-up-s-line');
+        area.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        area.style.display = "none";
+        texto.innerText = "Ver Procedimentos";
+        icone.classList.replace('ri-arrow-up-s-line', 'ri-arrow-down-s-line');
+    }
+}

@@ -1,6 +1,6 @@
-# Pricilla-website
+# Pricila-website
 
-Um teste para uma cliente que busca algo simples e que converte em agendamentos clínicos para sua clínica de estética facial.
+Um website para uma cliente que busca algo simples e que converta em agendamentos clínicos para sua clínica de estética facial.
 
 ## 🌐 Visualize o projeto:
 

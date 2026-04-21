@@ -314,15 +314,24 @@ body {
 }
 
 .banner-container {
-    width: 100%;
-    max-width: 600px; /* Limita a largura para não ficar gigante em telas de PC */
-    text-align: center;
+    width: 90%;          /* No celular, ocupa 90% da largura da tela */
+    max-width: 320px;    /* No máximo 320px (tamanho ideal para destaque sem exagerar) */
+    margin: 15px auto;   /* Centraliza horizontalmente e dá espaço vertical */
+    display: flex;       /* Ajuda na centralização */
+    justify-content: center;
 }
 
 .header-photo {
-    width: 100%;      /* Faz a foto ocupar toda a largura do container */
-    height: auto;      /* Mantém a proporção da foto (não achata) */
-    border-radius: 12px; /* Deixa as bordas levemente arredondadas, estilo moderno */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Dá um leve destaque/sombra na foto */
-    display: block;
+    width: 100%;         /* A foto preenche o container de forma fluida */
+    height: auto;        /* Mantém a proporção real da imagem */
+    border-radius: 20px; /* Bordas arredondadas modernas */
+    object-fit: contain; /* Garante que a foto não seja cortada */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Sombra suave para dar profundidade */
+}
+
+/* Ajuste extra para telas bem pequenas (iPhone SE, etc) */
+@media (max-width: 360px) {
+    .banner-container {
+        max-width: 250px; /* Diminui um pouco mais em celulares muito pequenos */
+    }
 }

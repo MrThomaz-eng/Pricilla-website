@@ -277,7 +277,7 @@ body {
 .header-photo {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: none;
     box-shadow: 0 30px 100px rgba(0,0,0,0.18);
 }
 
